@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-oswald);
+  --font-sans: var(--font-montserrat);
+  --font-accent: var(--font-sora);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* Dark mode (DEFAULT) - SVMMERLOCO Theme */
+:root {
+  --background: #121212;
+  --foreground: #F5F5F5;
+  --card: #0D0D0D;
+  --card-foreground: #F5F5F5;
+  --primary: #0D0D0D;
+  --primary-foreground: #F5F5F5;
+  --secondary: #D6C3A5;
+  --secondary-foreground: #0D0D0D;
+  --accent: #C8A97E;
+  --accent-foreground: #0D0D0D;
+  --muted: #2A2A2A;
+  --muted-foreground: rgba(245, 245, 245, 0.7);
+  --border: #2A2A2A;
+  --input: #0D0D0D;
+  --ring: #C8A97E;
+  --radius: 2px;
+}
+
+/* Light mode - SVMMERLOCO Theme */
+.light {
+  --background: #F5F0E8;
+  --foreground: #0D0D0D;
+  --card: #FFFFFF;
+  --card-foreground: #0D0D0D;
+  --primary: #0D0D0D;
+  --primary-foreground: #F5F0E8;
+  --secondary: #D6C3A5;
+  --secondary-foreground: #0D0D0D;
+  --accent: #C8A97E;
+  --accent-foreground: #0D0D0D;
+  --muted: #E8E0D5;
+  --muted-foreground: rgba(13, 13, 13, 0.7);
+  --border: #D6C3A5;
+  --input: #FFFFFF;
+  --ring: #C8A97E;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+/* Noise texture overlay */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A97E;
+}
+
+/* WhatsApp pulse animation */
+@keyframes wa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-wa-pulse {
+  animation: wa-pulse 2.5s ease-out infinite;
+}
