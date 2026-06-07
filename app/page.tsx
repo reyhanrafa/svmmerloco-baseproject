@@ -19,7 +19,7 @@ import { FloatingWhatsApp } from "@/components/floating-whatsapp"
 export default function Home() {
   return (
     <ThemeProvider>
-      <LoadingScreen />
+    { /* <LoadingScreen /> */}
       <main className="min-h-screen bg-background">
         <Navbar />
         <HeroSection />

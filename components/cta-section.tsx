@@ -34,7 +34,7 @@ export function CTASection() {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70" />
         {/* Noise Texture */}
-        <div className="noise-overlay" />
+       {/* <div className="noise-overlay" /> */}
       </div>
 
       {/* Content */}

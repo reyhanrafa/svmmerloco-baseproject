@@ -27,7 +27,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=900&q=60"
           alt="Streetwear fashion"
           fill
           priority
@@ -36,7 +36,7 @@ export function HeroSection() {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/55" />
         {/* Noise Texture */}
-        <div className="noise-overlay" />
+        {/* <div className="noise-overlay" /> */}
       </div>
 
       {/* Content */}
